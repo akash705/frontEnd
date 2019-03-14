@@ -31,6 +31,7 @@ export class DataServiceService {
       }).subscribe((data:Response)=>{
         if(data.status){
           this.data.loggedIn= true;
+          this.data.uuid=data['uuid'];
           res({status:true,uid:data['uuid']});
         }
       })

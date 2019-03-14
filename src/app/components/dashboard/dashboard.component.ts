@@ -14,7 +14,6 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit() {
     this.uuid = this.dataShare.getUid();
-
   }
 
 }
