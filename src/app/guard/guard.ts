@@ -17,12 +17,5 @@ export class accessing implements CanActivate{
               return true;
           }
           return false;
-
-        // if( this._dataShare){
-        //     return true;
-        // }else{
-        //     console.log('accessing failed');
-        //     this.router.navigate(['/']);
-        // }
       }
 }
