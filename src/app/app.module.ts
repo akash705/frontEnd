@@ -8,7 +8,6 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { LoginComponent } from './components/login/login.component';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button'
 import {MatInputModule} from '@angular/material/input';
@@ -18,7 +17,6 @@ import { FormsModule } from '@angular/forms';
     AppComponent,
     SignUpComponent,
     DashboardComponent,
-    LoginComponent
   ],
   imports: [
     BrowserModule,

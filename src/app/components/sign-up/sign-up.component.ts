@@ -38,5 +38,8 @@ export class SignUpComponent implements OnInit {
       this.error="Invalid Data";
     }
   }
+  login(){
+    this.router.navigate(['login']);
+  }
 
 }

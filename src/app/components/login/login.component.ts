@@ -22,6 +22,7 @@ export class LoginComponent implements OnInit {
   }
   submit(){
     this._dataService.login(this.userData).then(data=>{
+      console.log('data failed',data);
       if(data['status']){
           this.router.navigate(['dashboard']);
       }else{
