@@ -7,15 +7,16 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class DataServiceService {
   private data={
     loggedIn:false,
-    uuid:'',
+    uuid:'/',
   }
+  private url="";
   constructor(private httpClient:HttpClient) {
 
    }
 
   signUp(data){
       return new Promise((res,rej)=>{
-        this.httpClient.get('localhost:8080/signUp',{
+        this.httpClient.get(this.url+'signUp',{
           params:data,
         }).subscribe((data:Response)=>{
           if(data.status){
@@ -26,7 +27,7 @@ export class DataServiceService {
   }
   login(data){
     return new Promise((res,rej)=>{
-      this.httpClient.post('localhost:8080/login',{
+      this.httpClient.post(this.url+'login',{
         params:data,
       }).subscribe((data:Response)=>{
         if(data.status){
