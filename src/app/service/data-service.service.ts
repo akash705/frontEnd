@@ -15,7 +15,7 @@ export class DataServiceService {
 
   signUp(data){
       return new Promise((res,rej)=>{
-        this.httpClient.post('localhost:8080/postData',{
+        this.httpClient.get('localhost:8080/signUp',{
           params:data,
         }).subscribe((data:Response)=>{
           if(data.status){
