@@ -1,3 +1,4 @@
+import { DataServiceService } from './../../service/data-service.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
+  uuid="";
+  constructor(private dataShare:DataServiceService) { 
 
-  constructor() { }
+  }
 
   ngOnInit() {
+    this.uuid = this.dataShare.getUid();
+
   }
 
 }

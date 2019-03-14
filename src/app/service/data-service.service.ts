@@ -31,12 +31,15 @@ export class DataServiceService {
       }).subscribe((data:Response)=>{
         if(data.status){
           this.data.loggedIn= true;
-          res({status:true,uid:data['uid']});
+          res({status:true,uid:data['uuid']});
         }
       })
     })
   }
   getLoggedInStatus(){
     return this.data.loggedIn;
+  }
+  getUid(){
+    return this.data.uuid;
   }
 }
